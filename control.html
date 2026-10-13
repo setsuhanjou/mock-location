@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>Mock Location</title>
+  <link rel="stylesheet" href="vendor/leaflet.css">
+  <link rel="stylesheet" href="control.css">
+</head>
+<body>
+  <aside class="panel">
+    <h1>Mock Location</h1>
+
+    <section>
+      <label class="toggle">
+        <input type="checkbox" id="enabled">
+        <span>位置情報を差し替える</span>
+      </label>
+      <p class="current" id="current"></p>
+    </section>
+
+    <section>
+      <h2>地図クリック時の動作</h2>
+      <label><input type="radio" name="mode" value="point" checked> 現在地に設定</label>
+      <label><input type="radio" name="mode" value="route"> 路線の経由点を追加</label>
+      <label><input type="checkbox" id="follow" checked> 現在地を地図の中心に追従</label>
+    </section>
+
+    <section>
+      <h2>ジョイスティック</h2>
+      <div class="joystick" id="joystick">
+        <div class="joystick-knob" id="joystick-knob"></div>
+      </div>
+      <label>最高速度 <input type="number" id="joystick-speed" value="60" min="1" step="1"> km/h</label>
+      <p class="hint">方向キー / WASD でも移動できます</p>
+    </section>
+
+    <section>
+      <h2>路線再生</h2>
+      <p id="route-summary"></p>
+      <label>速度 <input type="number" id="route-speed" value="40" min="1" step="1"> km/h</label>
+      <label>終点に着いたら
+        <select id="route-loop-mode">
+          <option value="stop">停止する</option>
+          <option value="restart">始点に戻って繰り返す</option>
+          <option value="round-trip">折り返して往復する</option>
+        </select>
+      </label>
+      <div class="buttons">
+        <button id="route-play">▶ 再生</button>
+        <button id="route-stop">■ 停止</button>
+      </div>
+      <div class="buttons">
+        <button id="route-undo">最後の点を削除</button>
+        <button id="route-clear">路線をクリア</button>
+      </div>
+    </section>
+
+    <section>
+      <h2>座標を直接指定</h2>
+      <label>緯度 <input type="text" id="lat" placeholder="35.681236 または 35.68, 139.76"></label>
+      <label>経度 <input type="text" id="lng"></label>
+      <label>精度 <input type="number" id="accuracy" min="1" step="1"> m</label>
+      <select id="preset">
+        <option value="">プリセットから選択…</option>
+        <option value="35.681236,139.767125">東京駅</option>
+        <option value="43.068661,141.350755">札幌駅</option>
+        <option value="42.775200,141.692300">新千歳空港</option>
+        <option value="34.702485,135.495951">大阪駅</option>
+      </select>
+      <button id="apply">適用</button>
+    </section>
+  </aside>
+  <div id="map"></div>
+
+  <script src="vendor/leaflet.js"></script>
+  <script src="defaults.js"></script>
+  <script src="control.js"></script>
+</body>
+</html>

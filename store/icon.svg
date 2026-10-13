@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="512" height="512">
+  <!-- Web ストアの推奨に合わせ、四辺 16px は透明余白 -->
+  <circle cx="64" cy="64" r="48" fill="#1a73e8"/>
+  <circle cx="64" cy="64" r="36" fill="none" stroke="#fff" stroke-opacity="0.35" stroke-width="3" stroke-dasharray="6 6"/>
+  <path d="M64 30c-12.7 0-23 10.1-23 22.6C41 69.5 64 96 64 96s23-26.5 23-43.4C87 40.1 76.7 30 64 30z" fill="#fff"/>
+  <circle cx="64" cy="53" r="9" fill="#d93025"/>
+</svg>
