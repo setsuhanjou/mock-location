@@ -13,6 +13,10 @@ Chrome DevTools の「Sensors」と同じく、`Emulation.setGeolocationOverride
 - **直接入力**：座標の入力、プリセット地点の選択
 - 移動中は進行方向（`heading`）と速度（`speed`）も通知
 
+## インストール
+
+[Chrome ウェブストア](https://chromewebstore.google.com/detail/mock-location/mkbfjbdjkjladjpdpgflcamahfnmkcbm) からインストールしてください。
+
 ## インストール（開発版）
 
 1. このリポジトリを clone する
